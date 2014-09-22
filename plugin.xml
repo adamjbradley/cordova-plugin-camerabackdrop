@@ -34,7 +34,8 @@
         <clobbers target="camerabackdrop" />
     </js-module>
 
-    <!-- firefoxos
+    <!-- firefoxos -->
+    <!-- 
     <platform name="firefoxos">
         <config-file target="config.xml" parent="/*">
             <feature name="Device">
@@ -46,8 +47,10 @@
             <runs />
         </js-module>
     </platform>
-
-    <!-- tizen 
+ 	-->
+    
+    <!-- tizen -->
+    <!-- 
     <platform name="tizen">
         <js-module src="src/tizen/DeviceProxy.js" name="DeviceProxy">
             <runs />
@@ -66,7 +69,8 @@
         <source-file src="assets/au/com/identityconcepts/cordova/plugin/camerabackdrop/CameraBackdrop.java" target-dir="assets/au/com/identityconcepts/cordova/plugin/camerabackdrop" />
     </platform>
 
-    <!-- amazon-fireos
+    <!-- amazon-fireos -->
+    <!-- 
     <platform name="amazon-fireos">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="Device" >
@@ -76,8 +80,10 @@
 
         <source-file src="src/android/Device.java" target-dir="src/org/apache/cordova/device" />
     </platform>
-    
-    <!-- ubuntu
+    -->
+     
+    <!-- ubuntu -->
+    <!-- 
     <platform name="ubuntu">
         <header-file src="src/ubuntu/device.h" />
         <source-file src="src/ubuntu/device.cpp" />
@@ -85,8 +91,10 @@
             <merges target="device" />
         </js-module>
     </platform>
-
-    <!-- ios
+ 	-->
+    
+    <!-- ios -->
+    <!-- 
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
             <feature name="Device">
@@ -97,8 +105,10 @@
         <header-file src="src/ios/CDVDevice.h" />
         <source-file src="src/ios/CDVDevice.m" />
     </platform>
-
-    <!-- blackberry10
+ 	-->
+    
+    <!-- blackberry10 -->
+    <!-- 
     <platform name="blackberry10">
         <source-file src="src/blackberry10/index.js" target-dir="Device" />
         <config-file target="www/config.xml" parent="/widget">
@@ -108,8 +118,10 @@
             <rim:permit>read_device_identifying_information</rim:permit>
         </config-file>
     </platform>
-
-    <!-- wp7
+ 	-->
+    
+    <!-- wp7 -->
+    <!-- 
     <platform name="wp7">
         <config-file target="config.xml" parent="/*">
             <feature name="Device">
@@ -123,8 +135,10 @@
 
         <source-file src="src/wp/Device.cs" />
     </platform>
-
-    <!-- wp8
+ 	-->
+    
+    <!-- wp8 -->
+    <!-- 
     <platform name="wp8">
         <config-file target="config.xml" parent="/*">
             <feature name="Device">
@@ -138,22 +152,28 @@
 
         <source-file src="src/wp/Device.cs" />
     </platform>
-
-    <!-- windows8
+ 	-->
+    
+    <!-- windows8 -->
+    <!-- 
     <platform name="windows8">
         <js-module src="src/windows8/DeviceProxy.js" name="DeviceProxy">
             <merges target="" />
         </js-module>
     </platform>
-
-    <!-- windows
+ 	-->
+    
+    <!-- windows -->
+    <!-- 
     <platform name="windows">
         <js-module src="src/windows/DeviceProxy.js" name="DeviceProxy">
             <merges target="" />
         </js-module>
     </platform>
-
-    <!-- browser
+ 	-->
+    
+    <!-- browser -->
+    <!-- 
     <platform name="browser">
         <config-file target="config.xml" parent="/*">
             <feature name="Device">
