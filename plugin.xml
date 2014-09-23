@@ -66,7 +66,7 @@
             </feature>
         </config-file>
 
-        <source-file src="src/android/CameraBackdrop.java" target-dir="src/android" />
+        <source-file src="src/android/au/com/identityconcepts/cordova/plugin/CameraBackdrop.java" target-dir="src/androidau/com/identityconcepts/cordova/plugin/" />
     </platform>
 
     <!-- amazon-fireos -->
