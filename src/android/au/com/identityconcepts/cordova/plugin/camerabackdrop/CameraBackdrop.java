@@ -28,7 +28,18 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.R;
 import android.provider.Settings;
+
+import android.graphics.Color;
+import android.os.Bundle;
+import android.view.View;
+import android.view.WindowManager;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.RelativeLayout;
+
+//getWindow
+import android.app.Activity.*;
 
 public class CameraBackdrop extends CordovaPlugin {
     public static final String TAG = "CameraBackdrop";
@@ -54,7 +65,31 @@ public class CameraBackdrop extends CordovaPlugin {
      * @param webView The CordovaWebView Cordova is running in.
      */
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
-        super.initialize(cordova, webView);   
+        
+    	//super.init();
+    	super.initialize(cordova, webView);
+
+        // Now in config.xml http://javatechig.com/phonegap/creating-hello-world-using-phonegap-cordova-plugin
+        //super.loadUrl("file:///android_asset/www/index.html");
+    	
+        //getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
+    	this.cordova.getActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
+
+        //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+    	this.cordova.getActivity().getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+    	
+        setContentView(R.layout.main);
+        RelativeLayout view = (RelativeLayout)findViewById(R.id.phonegap_container);
+        
+        View html = (View)appView.getParent();
+        html.setBackgroundColor(Color.TRANSPARENT);
+        view.addView(html,  new LayoutParams(LayoutParams.FILL_PARENT,
+        		LayoutParams.FILL_PARENT));
+        
+        appView.setBackgroundColor(Color.TRANSPARENT);
+        
+        // Avoid the focus on click events
+        appView.setFocusable(false);
     }
 
     /**
